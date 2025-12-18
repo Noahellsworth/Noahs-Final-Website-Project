@@ -1,0 +1,360 @@
+/* Custom Stylesheet for From-Scratch Page - Aesop Aesthetic */
+
+/* Style 1: Body and Background */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f1e8;
+    color: #2b2b2b;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+/* Style 2: Header Section */
+.header-section {
+    background: linear-gradient(to bottom, #2b2b2b 0%, #3a3a3a 100%);
+    color: #f5f1e8;
+    text-align: center;
+    padding: 100px 20px 60px 20px;
+    border-bottom: 1px solid rgba(212, 197, 176, 0.3);
+}
+
+.header-section h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.header-section p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    opacity: 0.85;
+}
+
+/* Style 3: Jump Link (On-page Anchor) */
+.jump-link {
+    display: inline-block;
+    padding: 14px 35px;
+    background-color: #d4c5b0;
+    color: #2b2b2b;
+    text-decoration: none;
+    border-radius: 0;
+    font-weight: 400;
+    transition: all 0.3s;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.jump-link:hover {
+    background-color: #b8a88a;
+}
+
+/* Style 4: Content Container (Div for positioning) */
+.content-container {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+/* Div 1: Section Cards */
+.section-card {
+    background-color: white;
+    padding: 50px;
+    margin-bottom: 40px;
+    border-radius: 0;
+    border: 1px solid #e8e8e8;
+    transition: all 0.3s;
+}
+
+.section-card:hover {
+    border-color: #b8a88a;
+}
+
+.section-card h2 {
+    color: #2b2b2b;
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #b8a88a;
+    padding-bottom: 15px;
+}
+
+.section-card h3 {
+    color: #3a3a3a;
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+.section-card h4 {
+    color: #b8a88a;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.section-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+/* Div 2: Section Images */
+.section-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0;
+    margin: 25px 0;
+    border: 1px solid #e8e8e8;
+    display: block;
+}
+
+/* Div 3: Nested Lists Styling */
+.nested-list {
+    background-color: #fafaf7;
+    padding: 30px;
+    border-left: 3px solid #b8a88a;
+    margin: 25px 0;
+    border-radius: 0;
+}
+
+.nested-list h3 {
+    margin-top: 0;
+}
+
+.nested-list ol {
+    font-size: 1rem;
+    color: #2b2b2b;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+.nested-list ul {
+    margin-top: 10px;
+    color: #555;
+    font-weight: 300;
+}
+
+.nested-list li {
+    margin-bottom: 12px;
+}
+
+/* Video Container */
+.video-container {
+    margin: 35px 0;
+    text-align: center;
+}
+
+.video-container h3 {
+    text-align: left;
+}
+
+.video-container iframe {
+    max-width: 100%;
+    border-radius: 0;
+    border: 1px solid #e8e8e8;
+}
+
+/* Teams Section */
+.teams-section {
+    display: flex;
+    gap: 25px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+.team-card {
+    flex: 1;
+    min-width: 280px;
+    background-color: #fafaf7;
+    padding: 25px;
+    border-radius: 0;
+    border: 1px solid #e8e8e8;
+    transition: all 0.3s;
+}
+
+.team-card:hover {
+    border-color: #b8a88a;
+}
+
+.team-location {
+    font-size: 0.9rem;
+    color: #888;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+/* Travel List */
+.travel-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.travel-list li {
+    padding: 20px;
+    margin-bottom: 15px;
+    background-color: #fafaf7;
+    border-left: 3px solid #b8a88a;
+    border-radius: 0;
+    font-weight: 300;
+}
+
+.travel-list strong {
+    font-weight: 400;
+}
+
+/* Food List */
+.food-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.food-list li {
+    padding: 15px 0 15px 25px;
+    margin-bottom: 12px;
+    color: #555;
+    font-weight: 300;
+    position: relative;
+}
+
+.food-list li:before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: #b8a88a;
+}
+
+.food-list strong {
+    font-weight: 400;
+}
+
+/* Tableau Container */
+.tableau-container {
+    margin: 35px 0;
+    padding: 30px;
+    background-color: #fafaf7;
+    border-radius: 0;
+    border: 1px solid #e8e8e8;
+}
+
+.tableauPlaceholder {
+    margin: 20px auto;
+}
+
+/* Web App Section */
+.webapp-section {
+    text-align: center;
+    background-color: #3a3a3a;
+    color: #f5f1e8;
+}
+
+.webapp-section h2 {
+    color: #f5f1e8;
+    border-bottom: 1px solid rgba(212, 197, 176, 0.5);
+}
+
+.webapp-section p {
+    color: #f5f1e8;
+    font-size: 1.1rem;
+}
+
+.webapp-button {
+    display: inline-block;
+    padding: 14px 40px;
+    background-color: #d4c5b0;
+    color: #2b2b2b;
+    text-decoration: none;
+    border-radius: 0;
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-top: 20px;
+    transition: all 0.3s;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.webapp-button:hover {
+    background-color: #b8a88a;
+}
+
+/* Back Button */
+.back-button {
+    display: inline-block;
+    padding: 14px 35px;
+    background-color: #2b2b2b;
+    color: #f5f1e8;
+    text-decoration: none;
+    border-radius: 0;
+    margin-top: 20px;
+    transition: all 0.3s;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: 400;
+}
+
+.back-button:hover {
+    background-color: #3a3a3a;
+}
+
+/* Footer */
+.footer {
+    background-color: #2b2b2b;
+    color: rgba(245, 241, 232, 0.7);
+    text-align: center;
+    padding: 40px;
+    margin-top: 60px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.footer a {
+    color: #d4c5b0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #b8a88a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-section h1 {
+        font-size: 2rem;
+    }
+    
+    .section-card {
+        padding: 30px 20px;
+    }
+    
+    .teams-section {
+        flex-direction: column;
+    }
+    
+    .video-container iframe {
+        width: 100%;
+        height: 315px;
+    }
+    
+    .content-container {
+        padding: 10px;
+    }
+}

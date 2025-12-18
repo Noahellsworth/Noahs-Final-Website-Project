@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noah Ellsworth - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --charcoal: #2b2b2b;
+            --dark-grey: #3a3a3a;
+            --warm-beige: #d4c5b0;
+            --light-beige: #f5f1e8;
+            --accent-tan: #b8a88a;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: var(--charcoal);
+            background-color: var(--light-beige);
+        }
+        
+        .navbar {
+            background-color: var(--charcoal) !important;
+            padding: 1.2rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 300;
+            font-size: 1.3rem;
+            letter-spacing: 2px;
+            color: white !important;
+            text-transform: uppercase;
+        }
+        
+        .nav-link {
+            color: rgba(255,255,255,0.8) !important;
+            font-weight: 300;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin: 0 1rem;
+            transition: color 0.3s;
+            text-transform: uppercase;
+        }
+        
+        .nav-link:hover {
+            color: var(--warm-beige) !important;
+        }
+        
+        .hero-section {
+            background: linear-gradient(to bottom, var(--charcoal) 0%, var(--dark-grey) 100%);
+            color: white;
+            padding: 120px 0;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.2rem;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        
+        .hero-content p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.85;
+            font-weight: 300;
+            line-height: 1.8;
+            letter-spacing: 0.5px;
+        }
+        
+        .btn-custom {
+            background-color: var(--warm-beige);
+            color: var(--charcoal);
+            padding: 14px 35px;
+            font-weight: 400;
+            border-radius: 0;
+            border: none;
+            transition: all 0.3s;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+        
+        .btn-custom:hover {
+            background-color: var(--accent-tan);
+            color: var(--charcoal);
+        }
+        
+        .profile-image {
+            max-width: 350px;
+            width: 100%;
+            height: auto;
+            border: 3px solid var(--warm-beige);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        .about-section {
+            padding: 100px 0;
+            background-color: #fafaf7;
+        }
+        
+        .section-title {
+            color: var(--charcoal);
+            font-weight: 300;
+            font-size: 2rem;
+            letter-spacing: 2px;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+        }
+        
+        .lead {
+            font-weight: 300;
+            line-height: 2;
+            color: #555;
+            letter-spacing: 0.3px;
+        }
+        
+        .skill-card {
+            padding: 3rem 2rem;
+            border-radius: 0;
+            background: white;
+            border: 1px solid #e8e8e8;
+            margin-bottom: 2rem;
+            transition: all 0.3s;
+        }
+        
+        .skill-card:hover {
+            border-color: var(--accent-tan);
+            transform: translateY(-3px);
+        }
+        
+        .skill-card i {
+            font-size: 3.5rem;
+            color: var(--accent-tan);
+            margin-bottom: 1.5rem;
+            transition: all 0.3s;
+        }
+        
+        .skill-card:hover i {
+            transform: scale(1.1);
+            color: var(--charcoal);
+        }
+        
+        .skill-card h4 {
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: var(--charcoal);
+            text-transform: uppercase;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .skill-card p {
+            font-weight: 300;
+            color: #666;
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background-color: transparent;
+            color: white;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 0;
+            margin: 0 10px;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--warm-beige);
+            color: var(--charcoal);
+            border-color: var(--warm-beige);
+        }
+        
+        footer {
+            background-color: var(--charcoal);
+            color: rgba(255,255,255,0.7);
+            padding: 3rem 0;
+            text-align: center;
+            font-weight: 300;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 991px) {
+            .profile-image {
+                margin-top: 3rem;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Noah Ellsworth</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resume.html">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="hero-content">
+                        <h1>Noah H. Ellsworth</h1>
+                        <p>Pre-Finance Student at Brigham Young University</p>
+                        <p style="font-size: 1rem; opacity: 0.7;">Sales Professional · Problem Solver · Global Thinker</p>
+                        <p style="font-size: 1rem; margin-bottom: 3rem;">GPA: 3.49 / 4.0</p>
+                        <a href="resume.html" class="btn btn-custom me-3">View Resume</a>
+                        <a href="contact.html" class="btn btn-custom">Get in Touch</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-center">
+                    <img src="noah-profile.jpg" alt="Noah Ellsworth" class="profile-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <h2 class="section-title text-center">About</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <p class="lead text-center">
+                        A Pre-Finance student at Brigham Young University with demonstrated experience in sales, 
+                        customer relations, and business strategy. Combining academic excellence with practical 
+                        experience across solar sales, business process outsourcing, and entrepreneurship.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <div class="skill-card text-center">
+                        <i class="fas fa-rocket"></i>
+                        <h4>Sales Excellence</h4>
+                        <p>Proven track record in exceeding sales targets and building lasting customer relationships across multiple industries.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-card text-center">
+                        <i class="fas fa-lightbulb"></i>
+                        <h4>Academic Focus</h4>
+                        <p>Pursuing finance at BYU with relevant coursework in accounting, information systems, and management communication.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-card text-center">
+                        <i class="fas fa-globe-americas"></i>
+                        <h4>Global Experience</h4>
+                        <p>Fluent in Spanish with immersive experience in Argentina, bringing cultural awareness and language proficiency.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links mb-3">
+                <a href="https://www.linkedin.com/in/noah-h-ellsworth-" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p>&copy; 2024 Noah Ellsworth. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

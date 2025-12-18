@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Noah Ellsworth</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --charcoal: #2b2b2b;
+            --dark-grey: #3a3a3a;
+            --warm-beige: #d4c5b0;
+            --light-beige: #f5f1e8;
+            --accent-tan: #b8a88a;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: var(--charcoal);
+            background-color: var(--light-beige);
+        }
+        
+        .navbar {
+            background-color: var(--charcoal) !important;
+            padding: 1.2rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 300;
+            font-size: 1.3rem;
+            letter-spacing: 2px;
+            color: white !important;
+            text-transform: uppercase;
+        }
+        
+        .nav-link {
+            color: rgba(255,255,255,0.8) !important;
+            font-weight: 300;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin: 0 1rem;
+            transition: color 0.3s;
+            text-transform: uppercase;
+        }
+        
+        .nav-link:hover {
+            color: var(--warm-beige) !important;
+        }
+        
+        .page-header {
+            background: linear-gradient(to bottom, var(--charcoal) 0%, var(--dark-grey) 100%);
+            color: white;
+            padding: 100px 0 50px 0;
+            margin-top: 56px;
+        }
+        
+        .page-header h1 {
+            font-weight: 300;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+        
+        .page-header p {
+            font-weight: 300;
+            letter-spacing: 1px;
+            opacity: 0.8;
+        }
+        
+        .resume-section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            color: var(--charcoal);
+            font-weight: 300;
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--accent-tan);
+            padding-bottom: 15px;
+        }
+        
+        .education-card, .experience-card {
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            background: white;
+            border-radius: 0;
+            border: 1px solid #e8e8e8;
+            transition: all 0.3s;
+        }
+        
+        .education-card:hover, .experience-card:hover {
+            border-color: var(--accent-tan);
+        }
+        
+        .card-header-custom {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1.5rem;
+        }
+        
+        .job-title {
+            color: var(--charcoal);
+            font-weight: 400;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .company-name {
+            color: var(--accent-tan);
+            font-weight: 300;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            font-style: italic;
+        }
+        
+        .date-location {
+            color: #888;
+            font-size: 0.9rem;
+            text-align: right;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+        
+        .job-description {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .job-description li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 1rem;
+            color: #555;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+        
+        .job-description li:before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--accent-tan);
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .skill-item {
+            padding: 1.5rem;
+            background: white;
+            border-radius: 0;
+            border: 1px solid #e8e8e8;
+            font-weight: 300;
+            color: #555;
+            letter-spacing: 0.5px;
+            transition: all 0.3s;
+        }
+        
+        .skill-item:hover {
+            border-color: var(--accent-tan);
+        }
+        
+        .skill-item i {
+            color: var(--accent-tan);
+            margin-right: 10px;
+        }
+        
+        .coursework-list {
+            columns: 2;
+            column-gap: 2rem;
+        }
+        
+        .coursework-list li {
+            margin-bottom: 0.8rem;
+            color: #555;
+            font-weight: 300;
+        }
+        
+        footer {
+            background-color: var(--charcoal);
+            color: rgba(255,255,255,0.7);
+            padding: 3rem 0;
+            text-align: center;
+            font-weight: 300;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background-color: transparent;
+            color: white;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 0;
+            margin: 0 10px;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--warm-beige);
+            color: var(--charcoal);
+            border-color: var(--warm-beige);
+        }
+        
+        @media (max-width: 768px) {
+            .card-header-custom {
+                flex-direction: column;
+            }
+            
+            .date-location {
+                text-align: left;
+                margin-top: 0.5rem;
+            }
+            
+            .coursework-list {
+                columns: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Noah Ellsworth</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="resume.html">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Resume</h1>
+            <p>Experience, Education & Skills</p>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="resume-section" style="background-color: #fafaf7;">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-card">
+                <div class="card-header-custom">
+                    <div>
+                        <div class="job-title">Brigham Young University</div>
+                        <div class="company-name">Pre-Finance</div>
+                        <p class="mb-2" style="font-weight: 300;"><strong>GPA:</strong> 3.49 / 4.0</p>
+                    </div>
+                    <div class="date-location">
+                        <div>Provo, UT</div>
+                        <div>April 2028</div>
+                    </div>
+                </div>
+                <p style="font-weight: 400; margin-bottom: 1rem;"><strong>Relevant Coursework:</strong></p>
+                <ul class="coursework-list">
+                    <li>Accounting Principles</li>
+                    <li>Introduction to Information Systems</li>
+                    <li>Management Communication</li>
+                </ul>
+                <p class="mt-3" style="font-weight: 400; margin-bottom: 1rem;"><strong>Involvement:</strong></p>
+                <ul class="job-description">
+                    <li>Member, BYU Real Estate Development Club</li>
+                    <li>Member, Finance Society</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="resume-section" style="background-color: var(--light-beige);">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            
+            <div class="experience-card">
+                <div class="card-header-custom">
+                    <div>
+                        <div class="job-title">Squeeze</div>
+                        <div class="company-name">Business Process Outsourcing (Sales Experience)</div>
+                    </div>
+                    <div class="date-location">
+                        <div>Orem, UT</div>
+                        <div>Sep 2024 — May 2025</div>
+                    </div>
+                </div>
+                <ul class="job-description">
+                    <li>Efficiently handled high volume inbound and outbound calls addressing customers inquiries</li>
+                    <li>Proactively identified customers needs, leading to overall improved customer satisfaction</li>
+                    <li>Thrived in a dynamic team environment, always striving to deliver high quality service</li>
+                </ul>
+            </div>
+
+            <div class="experience-card">
+                <div class="card-header-custom">
+                    <div>
+                        <div class="job-title">Freedom Forever Solar Pros</div>
+                        <div class="company-name">Solar Sales Consultant</div>
+                    </div>
+                    <div class="date-location">
+                        <div>Richmond, VA - Puerto Rico - Atlanta, GA</div>
+                        <div>Apr 2024 — Aug 2024 & Apr 2025 — Aug 2025</div>
+                    </div>
+                </div>
+                <ul class="job-description">
+                    <li>Guided clients through the sales process, from the initial consultation to final installation</li>
+                    <li>Engaging with customers to educate them on the benefits of solar energy, tailoring it to their needs</li>
+                    <li>Collaborating with the sales team to exceed our monthly sales target while generating more than $35000</li>
+                </ul>
+            </div>
+
+            <div class="experience-card">
+                <div class="card-header-custom">
+                    <div>
+                        <div class="job-title">Kona Ice</div>
+                        <div class="company-name">Truck Driver (Server)</div>
+                    </div>
+                    <div class="date-location">
+                        <div>San Clemente, CA</div>
+                        <div>Dec 2022 — Apr 2024</div>
+                    </div>
+                </div>
+                <ul class="job-description">
+                    <li>Delivered a fun, memorable experience for customers by serving a delicious shaved Ice</li>
+                    <li>Managed inventory, tracked sales and kept the truck in pristine condition for max efficiency</li>
+                    <li>Developed an innovative strategy to push higher sales generating more than $500 per event</li>
+                </ul>
+            </div>
+
+            <div class="experience-card">
+                <div class="card-header-custom">
+                    <div>
+                        <div class="job-title">Ellsworth Pressure Washing</div>
+                        <div class="company-name">Company Manager (Project Manager)</div>
+                    </div>
+                    <div class="date-location">
+                        <div>San Clemente, CA</div>
+                        <div>May 2024 — Aug 2024</div>
+                    </div>
+                </div>
+                <ul class="job-description">
+                    <li>Facilitated sales strategies for suburban communities overall generating over $5000</li>
+                    <li>Streamlined operations and managed marketing leading to new clients and new jobs weekly</li>
+                    <li>Gained a loyal customer base through attention to detail and a commitment to excellence for my clients</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer Experience Section -->
+    <section class="resume-section" style="background-color: #fafaf7;">
+        <div class="container">
+            <h2 class="section-title">Volunteer Experience</h2>
+            
+            <div class="experience-card">
+                <div class="card-header-custom">
+                    <div>
+                        <div class="job-title">The Church of Jesus Christ of Latter-day Saints</div>
+                        <div class="company-name">Volunteer Representative</div>
+                    </div>
+                    <div class="date-location">
+                        <div>Provincia de Buenos Aires, Argentina</div>
+                        <div>Apr 2022 — Mar 2024</div>
+                    </div>
+                </div>
+                <ul class="job-description">
+                    <li>Led and facilitated workshops for hundreds of people who had the desire to learn English</li>
+                    <li>Successfully executed specific plans and constantly achieved set goals through leadership and dedication</li>
+                    <li>Achieved fluency in Spanish through studies and full immersion in the culture & people of Argentina</li>
+                </ul>
+            </div>
+
+            <div class="experience-card">
+                <div class="card-header-custom">
+                    <div>
+                        <div class="job-title">Summer Camp Volunteer</div>
+                        <div class="company-name">Organization, Service</div>
+                    </div>
+                    <div class="date-location">
+                        <div>Los Alamitos, CA</div>
+                        <div>June 2017 — Aug 2017</div>
+                    </div>
+                </div>
+                <ul class="job-description">
+                    <li>Worked with kids of all ages, 5 - 12 specifically</li>
+                    <li>Successfully helped the camp run as I participated in actives such as sports and crafts</li>
+                    <li>Underwent various trainings in order to best fulfill my role as a camp worker</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="resume-section" style="background-color: var(--light-beige);">
+        <div class="container">
+            <h2 class="section-title">Skills & Interests</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fas fa-language"></i>
+                    Fluency in Spanish
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-chart-line"></i>
+                    Sales & Customer Relations
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-users"></i>
+                    Team Leadership
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-comments"></i>
+                    Communication
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-snowboarding"></i>
+                    Snowboarding
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-cookie-bite"></i>
+                    Dessert Enthusiast
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-futbol"></i>
+                    Intramural Soccer All Star
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links mb-3">
+                <a href="https://www.linkedin.com/in/noah-h-ellsworth-" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p>&copy; 2024 Noah Ellsworth. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
